@@ -6,6 +6,7 @@ docker rm -f s1 2>/dev/null || true
 docker rm -f s2 2>/dev/null || true
 docker run -d --name s1 softengheigvd/webapp
 docker run -d --name s2 softengheigvd/webapp
+docker run -d --name s3 softengheigvd/webapp
 
 # Run load balancer
 echo "************************  run haproxy  ************************"

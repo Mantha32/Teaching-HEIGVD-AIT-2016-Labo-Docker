@@ -2,7 +2,7 @@
 FROM haproxy:1.5
 
 # TODO: [GEN] Replace with your name and email
-MAINTAINER Laurent Prevost <laurent.prevost@heig-vd.ch>
+MAINTAINER Iando Rafidimalala <iando.Rafidimalalathevoz@heig-vd.ch>
 
 # Install some tools
 # TODO: [HB] Update to install required tool to install NodeJS
