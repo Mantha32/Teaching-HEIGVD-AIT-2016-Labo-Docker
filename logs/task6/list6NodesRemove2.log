@@ -1,0 +1,9 @@
+root@67f089444169:/# ls -la /nodes
+total 24
+drwxr-xr-x  2 root root 4096 Jan  5 20:54 .
+drwxr-xr-x 74 root root 4096 Jan  5 20:48 ..
+-rw-r--r--  1 root root   24 Jan  5 20:39 212224633f3c
+-rw-r--r--  1 root root   24 Jan  5 20:44 40c3e7be940e
+-rw-r--r--  1 root root   24 Jan  5 20:40 ce31db4215de
+-rw-r--r--  1 root root   24 Jan  5 20:40 f9741841d773
+
