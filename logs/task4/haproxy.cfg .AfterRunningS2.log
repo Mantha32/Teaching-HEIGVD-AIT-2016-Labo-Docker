@@ -1,0 +1,5 @@
+in ha:
+result of cat /tmp/haproxy.cfg
+
+Container 9a152a88b7fd has joined the Serf cluster with the following IP address: 172.18.0.4
+

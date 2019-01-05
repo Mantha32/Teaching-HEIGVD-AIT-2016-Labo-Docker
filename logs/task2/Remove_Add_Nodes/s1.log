@@ -1,0 +1,82 @@
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+/opt/bin/serf agent --join ha --tag role=backend
+==> Starting Serf agent...
+==> Starting Serf agent RPC...
+==> Serf agent running!
+         Node name: '974fa2c35301'
+         Bind addr: '0.0.0.0:7946'
+          RPC addr: '127.0.0.1:7373'
+         Encrypted: false
+          Snapshot: false
+           Profile: lan
+==> Joining cluster...(replay: false)
+    Join completed. Synced with 1 initial agents
+
+==> Log data will now stream in as it occurs:
+
+    2019/01/04 21:04:57 [INFO] agent: Serf agent starting
+    2019/01/04 21:04:57 [INFO] serf: EventMemberJoin: 974fa2c35301 172.18.0.3
+    2019/01/04 21:04:57 [INFO] agent: joining: [ha] replay: false
+    2019/01/04 21:04:57 [INFO] serf: EventMemberJoin: 18c90ef5774f 172.18.0.2
+    2019/01/04 21:04:57 [INFO] agent: joined: 1 nodes
+Application started
+    2019/01/04 21:04:58 [INFO] agent: Received event: member-join
+    2019/01/04 21:05:41 [INFO] serf: EventMemberJoin: 91056941daa0 172.18.0.4
+    2019/01/04 21:05:42 [INFO] agent: Received event: member-join
+    2019/01/04 21:06:03 [INFO] memberlist: Suspect 91056941daa0 has failed, no acks received
+    2019/01/04 21:06:04 [INFO] memberlist: Suspect 91056941daa0 has failed, no acks received
+    2019/01/04 21:06:06 [INFO] memberlist: Suspect 91056941daa0 has failed, no acks received
+    2019/01/04 21:06:08 [INFO] memberlist: Marking 91056941daa0 as failed, suspect timeout reached
+    2019/01/04 21:06:08 [INFO] serf: EventMemberFailed: 91056941daa0 172.18.0.4
+    2019/01/04 21:06:09 [INFO] agent: Received event: member-failed
+    2019/01/04 21:06:27 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:07:37 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:08:08 [INFO] memberlist: Suspect 18c90ef5774f has failed, no acks received
+    2019/01/04 21:08:09 [INFO] memberlist: Suspect 18c90ef5774f has failed, no acks received
+    2019/01/04 21:08:11 [INFO] memberlist: Suspect 18c90ef5774f has failed, no acks received
+    2019/01/04 21:08:12 [INFO] memberlist: Suspect 18c90ef5774f has failed, no acks received
+    2019/01/04 21:08:13 [INFO] memberlist: Marking 18c90ef5774f as failed, suspect timeout reached
+    2019/01/04 21:08:13 [INFO] serf: EventMemberFailed: 18c90ef5774f 172.18.0.2
+    2019/01/04 21:08:14 [INFO] memberlist: Suspect 18c90ef5774f has failed, no acks received
+    2019/01/04 21:08:14 [INFO] agent: Received event: member-failed
+    2019/01/04 21:08:40 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:09:13 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:09:46 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:10:19 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
+    2019/01/04 21:10:49 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:11:22 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
+    2019/01/04 21:11:52 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
+    2019/01/04 21:12:22 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
+    2019/01/04 21:12:52 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:13:25 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:13:58 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:14:31 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:15:04 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
+    2019/01/04 21:15:34 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:16:07 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
+    2019/01/04 21:16:37 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:17:10 [INFO] serf: attempting reconnect to 91056941daa0 172.18.0.4:7946
+    2019/01/04 21:17:43 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
+    2019/01/04 21:17:43 [INFO] serf: EventMemberJoin: cad0eced04e4 172.18.0.2
+    2019/01/04 21:17:44 [INFO] agent: Received event: member-join
+    2019/01/04 21:17:46 [WARN] memberlist: Was able to reach cad0eced04e4 via TCP but not UDP, network may be misconfigured and not allowing bidirectional UDP
+    2019/01/04 21:17:48 [WARN] memberlist: Was able to reach cad0eced04e4 via TCP but not UDP, network may be misconfigured and not allowing bidirectional UDP
+    2019/01/04 21:17:49 [WARN] memberlist: Was able to reach cad0eced04e4 via TCP but not UDP, network may be misconfigured and not allowing bidirectional UDP
+    2019/01/04 21:17:51 [WARN] memberlist: Was able to reach cad0eced04e4 via TCP but not UDP, network may be misconfigured and not allowing bidirectional UDP
+    2019/01/04 21:17:53 [WARN] memberlist: Was able to reach cad0eced04e4 via TCP but not UDP, network may be misconfigured and not allowing bidirectional UDP
+    2019/01/04 21:17:55 [INFO] memberlist: Suspect cad0eced04e4 has failed, no acks received
+    2019/01/04 21:17:57 [INFO] memberlist: Suspect cad0eced04e4 has failed, no acks received
+    2019/01/04 21:17:58 [INFO] memberlist: Suspect cad0eced04e4 has failed, no acks received
+    2019/01/04 21:18:00 [INFO] memberlist: Suspect cad0eced04e4 has failed, no acks received
+    2019/01/04 21:18:00 [INFO] memberlist: Marking cad0eced04e4 as failed, suspect timeout reached
+    2019/01/04 21:18:00 [INFO] serf: EventMemberFailed: cad0eced04e4 172.18.0.2
+    2019/01/04 21:18:01 [INFO] memberlist: Suspect cad0eced04e4 has failed, no acks received
+    2019/01/04 21:18:01 [INFO] agent: Received event: member-failed
+    2019/01/04 21:18:13 [INFO] serf: attempting reconnect to 18c90ef5774f 172.18.0.2:7946
