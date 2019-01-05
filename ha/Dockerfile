@@ -56,7 +56,9 @@ COPY config/haproxy.cfg.hb /config
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# TODO: [CFG] Create the nodes folder
+# The nodes repository doesn't exist already, we need to create it
+RUN mkdir /nodes
+
 
 # Expose the ports for Serf
 EXPOSE 7946 7373

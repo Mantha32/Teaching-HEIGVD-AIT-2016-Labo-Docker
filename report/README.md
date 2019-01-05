@@ -165,6 +165,21 @@ Docker has caching layer system on purpose to reuse those layer. The order instr
 The configuration file /tmp/haproxy.cfg is a temporary file that contain only the last container has joined the cluster. This file is override when an event occures.
 
 ## 7. Task 5: Generate a new load balancer configuration when membership changes
+**Deliverables:**</br>
+1. **Provide the file /usr/local/etc/haproxy/haproxy.cfg generated in the ha container after each step. Three files are expected.** </br>
+[haproxy](../logs/task5/haproxy.cfg.log)</br>
+[haproxy after running s1](../logs/task5/haproxyAfterRunningS1.cfg.log)</br>
+[haproxy after running s2](../logs/task5/haproxyAfterRunningS2.cfg.log)</br>
+[docker  inspect ha](../logs/task5/dockerInspectHA.log)</br>
+[docker  inspect s1](../logs/task5/dockerInspectS1.log)</br>
+[docker  inspect s2](../logs/task5/dockerInspectS2.log)</br>
+[docker  ps](../logs/task5/docker_ps.log)</br>
+2. **Provide the list of files from the /nodes folder inside the ha container. One file expected with the command output.**
+[node list](../logs/task5/nodes.log)</br>
+3. **Provide the configuration file after you stopped one container and the list of nodes present in the /nodes folder. One file expected with the command output. Two files are expected.**</br>
+[node list](../logs/task5/nodesS1Stop.log)</br>
+[haproxy after s1 stopped](../logs/task5/haproxyAfterStoppingS1.cfg.log)</br>
+[docker  ps](../logs/task5/docker_psAfterStoppingS1.log )</br>
 
 ## 8. Task 6: Make the load balancer automatically reload the new configuration
 
