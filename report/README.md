@@ -1,25 +1,22 @@
-
 title: Lab 04 - Docker
 
-----
+---
 
 Iando Rafidimalala & Antoine Nourazar
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+### Table of contents
+- [1. Introduction](#1-introduction)
+- [2. task 0: Identify issues and install the tools](#2-task-0-identify-issues-and-install-the-tools)
+	- [2.1 Identify issues](#21-identify-issues)
+	- [2.2 install the tools](#22-install-the-tools)
+- [3. Task 1: Add a process supervisor to run several processes](#3-task-1-add-a-process-supervisor-to-run-several-processes)
+- [4. Task 2: Add a tool to manage membership in the web server cluster](#4-task-2-add-a-tool-to-manage-membership-in-the-web-server-cluster)
+- [5. Task 3: React to membership changes](#5-task-3-react-to-membership-changes)
+- [6. Task 4: Use a template engine to easily generate configuration files](#6-task-4-use-a-template-engine-to-easily-generate-configuration-files)
+- [7. Task 5: Generate a new load balancer configuration when membership changes](#7-task-5-generate-a-new-load-balancer-configuration-when-membership-changes)
+- [8. Task 6: Make the load balancer automatically reload the new configuration](#8-task-6-make-the-load-balancer-automatically-reload-the-new-configuration)
+- [9. Conclusion](#9-conclusion)
 
-	- [1. Introduction](#1-introduction)
-	- [2. task 0: Identify issues and install the tools](#2-task-0-identify-issues-and-install-the-tools)
-		- [2.1 Identify issues](#21-identify-issues)
-		- [2.2 install the tools](#22-install-the-tools)
-	- [3. Task 1: Add a process supervisor to run several processes](#3-task-1-add-a-process-supervisor-to-run-several-processes)
-	- [4. Task 2: Add a tool to manage membership in the web server cluster](#4-task-2-add-a-tool-to-manage-membership-in-the-web-server-cluster)
-	- [5. Task 3: React to membership changes](#5-task-3-react-to-membership-changes)
-	- [6. Task 4: Use a template engine to easily generate configuration files](#6-task-4-use-a-template-engine-to-easily-generate-configuration-files)
-	- [7. Task 5: Generate a new load balancer configuration when membership changes](#7-task-5-generate-a-new-load-balancer-configuration-when-membership-changes)
-	- [8. Task 6: Make the load balancer automatically reload the new configuration](#8-task-6-make-the-load-balancer-automatically-reload-the-new-configuration)
-	- [10. Conclusion](#10-conclusion)
-
-<!-- /TOC -->
 
 
 ## 1. Introduction
@@ -219,7 +216,7 @@ This link contain the docker ps:
 [docker ps](../logs/task6/docker_ps_6Nodes.log)</br>
 
 *Removing 2 nodes* </br>
-After stopping 2 nodes (S7 s8), we can see the following result:
+After stopping 2 nodes (s7 s8), we can see the following result:
 ![haproxy with 4 nodes](asset/task6_statReport6NodesRemove2nodes.png) </br>
 This link contain the list nodes available:
 [nodes list](../logs/task6/list6NodesRemove2.log)</br>
@@ -229,5 +226,5 @@ This link contain the docker ps:
 2. **Give your own feelings about the final solution. Propose improvements or ways to do the things differently. If any, provide references to your readings for the improvements.**</br>
 The infrastructure works well. For improvements, we can add more feature like trigger. When a node is down or up, it's more interesting to have an alert for monitor purpose.
 
-## 10. Conclusion
+## 9. Conclusion
 This lab is very interesting. We learn how to set up  HAProxy and docker to make up an production workflow. This lab is quite long. Reading documentation took us more time than expected but we learn more about docker and load balancing.
